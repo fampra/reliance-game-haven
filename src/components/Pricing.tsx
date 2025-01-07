@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,10 +12,10 @@ export const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-secondary sm:text-4xl">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             Simple, Transparent <span className="text-primary">Pricing</span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-muted-foreground">
             Choose the perfect plan for your gaming needs
           </p>
         </motion.div>
@@ -69,8 +69,8 @@ export const Pricing = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative p-8 rounded-xl ${
                 plan.highlighted
-                  ? "bg-primary text-white shadow-xl scale-105"
-                  : "bg-white text-secondary border border-gray-100"
+                  ? "bg-primary text-primary-foreground shadow-xl scale-105"
+                  : "bg-card text-foreground border border-border"
               }`}
             >
               <h3 className="text-xl font-semibold mb-4">{plan.name}</h3>
@@ -91,8 +91,8 @@ export const Pricing = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`w-full py-3 px-6 rounded-md font-semibold transition-colors ${
                   plan.highlighted
-                    ? "bg-white text-primary hover:bg-gray-100"
-                    : "bg-primary text-white hover:bg-primary/90"
+                    ? "bg-background text-foreground hover:bg-secondary"
+                    : "bg-primary text-primary-foreground hover:bg-primary/90"
                 }`}
               >
                 Get Started

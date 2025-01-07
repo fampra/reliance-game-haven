@@ -3,7 +3,7 @@ import { Database, Cloud, Cpu } from "lucide-react";
 
 export const Features = () => {
   return (
-    <section id="features" className="py-20 bg-gray-50">
+    <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,10 +12,10 @@ export const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-secondary sm:text-4xl">
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             Premium Features, <span className="text-primary">Zero Cost</span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-muted-foreground">
             Everything you need to run your game server, included in every plan
           </p>
         </motion.div>
@@ -47,15 +47,15 @@ export const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-8 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="relative p-8 bg-card rounded-xl shadow-sm border border-border hover:shadow-md transition-shadow"
             >
               <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-6">
                 <feature.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-secondary mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}
         </div>
